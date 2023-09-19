@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link, animateScroll as scroll } from "react-scroll";
 
 function Navigation() {
   return (
@@ -9,10 +10,10 @@ function Navigation() {
         </a>
       </div>
       <div className="nav-links">
-        <a href="#calendar-section">Calendar</a>
-        <a href="#news-section">News</a>
-        <a href="#membership-section">Membership</a>
-        <a href="#about-section">About the Club</a>
+        <Link to="calendar-section" smooth={true} duration={500}>Calendar</Link>
+        <Link to="news-section" smooth={true} duration={500}>News</Link>
+        <Link to="membership-section" smooth={true} duration={500}>Membership</Link>
+        <Link to="about-section" smooth={true} duration={500}>About the Club</Link>
       </div>
       <div className="nav-search">
         <input type="text" id="searchInput" placeholder="Search..." />
@@ -26,3 +27,4 @@ function Navigation() {
 }
 
 export default Navigation;
+
