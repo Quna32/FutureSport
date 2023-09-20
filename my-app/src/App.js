@@ -19,21 +19,22 @@ import ErrorBoundary from "./Components/ErrorBoundary/ErrorBoundary.js";
 import ErrorThrower from "./Components/ErrorBoundary/ErrorThrower.js";
 
 export const WeatherIcons = {
-  "01d": "/icons/sunny.svg",
-  "01n": "/icons/night.svg",
-  "02d": "/icons/day.svg",
-  "02n": "/icons/cloudy-night.svg",
-  "03d": "/icons/cloudy.svg",
-  "03n": "/icons/cloudy.svg",
-  "04d": "/icons/perfect-day.svg",
-  "04n": "/icons/cloudy-night.svg",
-  "09d": "/icons/rain.svg",
-  "09n": "/icons/rain-night.svg",
-  "10d": "/icons/rain.svg",
-  "10n": "/icons/rain-night.svg",
-  "11d": "/icons/storm.svg",
-  "11n": "/icons/storm.svg",
+  "01d": `${process.env.PUBLIC_URL}/icons/sunny.svg`,
+  "01n": `${process.env.PUBLIC_URL}/icons/night.svg`,
+  "02d": `${process.env.PUBLIC_URL}/icons/day.svg`,
+  "02n": `${process.env.PUBLIC_URL}/icons/cloudy-night.svg`,
+  "03d": `${process.env.PUBLIC_URL}/icons/cloudy.svg`,
+  "03n": `${process.env.PUBLIC_URL}/icons/cloudy.svg`,
+  "04d": `${process.env.PUBLIC_URL}/icons/perfect-day.svg`,
+  "04n": `${process.env.PUBLIC_URL}/icons/cloudy-night.svg`,
+  "09d": `${process.env.PUBLIC_URL}/icons/rain.svg`,
+  "09n": `${process.env.PUBLIC_URL}/icons/rain-night.svg`,
+  "10d": `${process.env.PUBLIC_URL}/icons/rain.svg`,
+  "10n": `${process.env.PUBLIC_URL}/icons/rain-night.svg`,
+  "11d": `${process.env.PUBLIC_URL}/icons/storm.svg`,
+  "11n": `${process.env.PUBLIC_URL}/icons/storm.svg`,
 };
+
 
 function App() {
   const [weather, updateWeather] = useState(null);
@@ -66,10 +67,11 @@ function App() {
   `;
 
   const newsImages = [
-    'images/news-image-1.jpg',
-    'images/news-image-2.jpg',
-    'images/news-image-3.jpg',
+    `${process.env.PUBLIC_URL}/images/news-image-1.jpg`,
+    `${process.env.PUBLIC_URL}/images/news-image-2.jpg`,
+    `${process.env.PUBLIC_URL}/images/news-image-3.jpg`,
   ];
+  
 
   return (
     <ErrorBoundary>
