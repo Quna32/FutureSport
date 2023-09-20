@@ -6,7 +6,7 @@ function Navigation() {
     <nav className="navbar" data-testid="navbar">
       <div className="logo-container">
         <a href="index.html">
-          <img className="Logo" src="images/Logo.jpg" alt="Logo" data-testid="logo-image" />
+        <img className="Logo" src={`${process.env.PUBLIC_URL}/images/Logo.jpg`} alt="Logo" data-testid="logo-image" />
         </a>
       </div>
       <div className="nav-links">
