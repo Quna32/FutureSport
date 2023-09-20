@@ -2,20 +2,23 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Axios from "axios";
 import './App.css';
-import { Link } from 'react-scroll';
-import WeatherComponent from "./Components/Aside/WeatherInfoComponent";
+import WeatherComponent from "./Components/Aside/WeatherInfoComponent.js";
 import Header from './Components/Header/Header.js';
-import Welcome from './Components/Header/Welcome';
+import Welcome from './Components/Header/Welcome.js';
 import Navigation from './Components/Navigation/Navigation.js';
 import Main from './Components/Main/Main.js';
-import NewsCarousel from './Components/News/NewsCarousel';
+import NewsCarousel from './Components/News/NewsCarousel.js';
 import AboutUs from './Components/AboutUs/AboutUs.js';
 import Calendar from './Components/Main/Calendar.js';
-import Table from './Components/Main/Table';
+import Table from './Components/Main/Table.js';
 import Map from './Components/Main/Map.js';
 import MembershipForm from './Components/Main/MembershipForm.js';
 import Aside from './Components/Aside/Aside.js';
+import FooterMessage from "./Components/Footer/FooterMessage.js";
+import ScrollToTopButton from "./Components/Footer/ScrollToTopButton.js";
 import Footer from './Components/Footer/Footer.js';
+import ErrorBoundary from "./Components/ErrorBoundary/ErrorBoundary.js";
+import ErrorThrower from "./Components/ErrorBoundary/ErrorThrower.js";
 
 export const WeatherIcons = {
   "01d": "/icons/sunny.svg",
@@ -71,41 +74,45 @@ function App() {
   ];
 
   return (
-    <div>
-    <div className="App">
-      <div className="container">
-        <div className="left-container">
-          <Header />
-          <Welcome />
-          <Navigation />
-          <Main />
-          <div id="news-section">
-          <NewsCarousel images={newsImages} />
+    <ErrorBoundary>
+      <div>
+        <div className="App">
+          <div className="container">
+            <div className="left-container">
+              <Header />
+              <Welcome />
+              <Navigation />
+              <Main />
+              <div id="news-section">
+                <NewsCarousel images={newsImages} />
+              </div>
+              <div id="about-section">
+                <AboutUs />
+              </div>
+              <div id="calendar-section">
+                <Calendar />
+              </div>
+              <Table />
+              <Map />
+              <div id="membership-section">
+                <MembershipForm />
+              </div>
+              <Aside />
+              <FooterMessage />
+              <ScrollToTopButton />
+            </div>
+            <div className="right-container">
+              <Container className="weather">
+                {weather && <WeatherComponent weather={weather} />}
+              </Container>
+            </div>
           </div>
-          <div id="about-section">
-            <AboutUs />
-          </div>
-          <div id="calendar-section">
-            <Calendar />
-          </div>
-          <Table />
-          <Map />
-          <div id="membership-section">
-          <MembershipForm />
-          </div>
-          <Aside />
         </div>
-        <div className="right-container">
-          <Container className="weather">
-            {weather && <WeatherComponent weather={weather} />}
-          </Container>
-        </div>
+        <Footer />
       </div>
-    </div>
-          <Footer />
-</div>
+    {/*<ErrorThrower />*/}
+    </ErrorBoundary>
   );
 }
 
 export default App;
-

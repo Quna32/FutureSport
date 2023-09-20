@@ -10,10 +10,11 @@ function Navigation() {
         </a>
       </div>
       <div className="nav-links">
-        <Link to="calendar-section" smooth={true} duration={500}>Calendar</Link>
-        <Link to="news-section" smooth={true} duration={500}>News</Link>
-        <Link to="membership-section" smooth={true} duration={500}>Membership</Link>
-        <Link to="about-section" smooth={true} duration={500}>About the Club</Link>
+        <Link to="calendar-section" className="nav-link" smooth={true} duration={500} offset={-80}>Calendar</Link>
+        <Link to="news-section" className="nav-link" smooth={true} duration={500} offset={-80}>News</Link>
+        <Link to="membership-section" className="nav-link" smooth={true} duration={500} offset={-80}>Membership</Link>
+        <Link to="about-section" className="nav-link" smooth={true} duration={500} offset={-80}>About the Club</Link>
+
       </div>
       <div className="nav-search">
         <input type="text" id="searchInput" placeholder="Search..." />

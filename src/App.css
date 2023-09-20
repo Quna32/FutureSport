@@ -4,7 +4,7 @@ body {
   margin: 0;
   text-align: center;
   font-family: 'Montserrat', serif;
-  background-color: #FEFEFE;
+  background-color: #FFFFFF;
 }
 
 p {
@@ -73,7 +73,6 @@ h3 {
   display: flex;
   align-items: center;
   margin-right: 20px;
-  cursor: pointer;
 }
 
 .navbar a {
@@ -210,33 +209,29 @@ img {
       fill: white;
   }
 
-/* Table of data*/
-
+/* Table of data */
 .table-container {
-  width: 50%;
-  margin: 100px auto 100px auto;
-  text-align: left;
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Center horizontally */
+  margin: 100px auto; /* Adjust margin as needed */
+  max-width: 1200px; /* Limit maximum width */
+  padding: 0 20px; /* Add padding as needed */
+  text-align: center; /* Center text horizontally */
   line-height: 2;
 }
 
-.table-data {
-  height: 150px;
-  width: 150px;
-  float: right;
-  margin-left: 40px;
-}
-
+/* Style for the table */
 table {
   border-collapse: collapse;
   width: 80%;
-  margin: 20px auto;
+  max-width: 100%; /* Make the table responsive */
   border: 1px solid #ccc;
 }
 
 th, td {
   border: 1px solid #ccc;
   padding: 8px;
-  text-align: center;
 }
 
 th {
@@ -252,21 +247,35 @@ tr:hover {
   background-color: #e0e0e0;
 }
 
-/* Video*/
 
+/* About Section */
+#about-section {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Center horizontally */
+  margin: 100px auto; /* Adjust margin as needed */
+  max-width: 1200px; /* Limit maximum width */
+  padding: 0 20px; /* Add padding as needed */
+}
+
+/* Style for the video */
 .video {
-  width: 50%;
-  margin: 100px auto 100px auto;
-  text-align: left;
-  line-height: 2;
+  width: 100%; /* Take up the entire width of its container */
 }
 
 .video-iframe {
-  height: 210px;
-  width: 373px;
-  float: left;
-  margin-right: 40px;
+  height: 240px;
+  width: 426px;
+  /* Adjust other video styles as needed */
 }
+
+/* Style for the text */
+.about-text {
+  text-align: center; /* Center text horizontally */
+  line-height: 2;
+  /* Adjust other text styles as needed */
+}
+
 
 
 /* Locate Us */
@@ -399,13 +408,23 @@ button[type="submit"] {
   
 }
 
+/* Adjust the right container and weather component styles */
 .right-container {
-  flex: 0.3; 
-  margin-left: 20px; 
+  flex: 0.3;
+  margin-left: 20px;
   margin-top: 50px;
   border-left: solid rgb(194, 194, 194);
+  position: sticky;
+  top: 50px; /* Stick to the top of the viewport */
+  max-height: calc(100vh - 50px); /* Set the maximum height based on your design */
+  width: 250px; /* Adjust the width as needed */
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
 .weather {
+  position: relative;
   margin-left: 20px;
 }

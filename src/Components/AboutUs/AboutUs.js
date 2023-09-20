@@ -3,6 +3,11 @@ import React from 'react';
 function AboutUs() {
   return (
     <section className="about-section">
+       <h3>About the Club</h3>
+        <p className="about-text">
+          Lorem ipsum dolor sit amet, quis in duis, iaculis id felis.
+          Consectetuer vestibulum, nunc urna lectus, erat ligula.
+        </p>
       <div className="video">
         <iframe
           className="video-iframe"
@@ -14,11 +19,6 @@ function AboutUs() {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowFullScreen
         ></iframe>
-        <h3>About the Club</h3>
-        <p>
-          Lorem ipsum dolor sit amet, quis in duis, iaculis id felis.
-          Consectetuer vestibulum, nunc urna lectus, erat ligula.
-        </p>
       </div>
       <hr />
     </section>

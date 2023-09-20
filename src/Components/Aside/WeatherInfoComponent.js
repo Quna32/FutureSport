@@ -1,9 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import {WeatherIcons} from "../../App";
+import {WeatherIcons} from "../../App.js";
 
 
-// Use PUBLIC_URL to construct the icon paths
 export const WeatherInfoIcons = {
   sunset: `${process.env.PUBLIC_URL}/icons/temp.svg`,
   sunrise: `${process.env.PUBLIC_URL}/icons/temp.svg`,
@@ -24,14 +23,14 @@ export const WeatherInfoIcons = {
 const Location = styled.span`
   margin: 15px auto;
   text-transform: capitalize;
-  font-size: 28px;
+  font-size: 20px;
   font-weight: bold;
 `;
 
 const Condition = styled.span`
   margin: 20px auto;
   text-transform: capitalize;
-  font-size: 14px;
+  font-size: 21px;
   & span {
     font-size: 28px;
   }
@@ -79,8 +78,8 @@ const InfoContainer = styled.div`
 `;
 
 const InfoIcon = styled.img`
-  width: 36px;
-  height: 36px;
+  width: 20px;
+  height: 20px;
 `;
 
 const InfoLabel = styled.span`
@@ -117,6 +116,7 @@ const WeatherComponent = (props) => {
   };
   return (
     <>
+    <div className="weather-container">
       <WeatherContainer>
         <Condition>
           <span>{`${Math.floor(weather?.main?.temp - 273)}°C`}</span>
@@ -125,7 +125,7 @@ const WeatherComponent = (props) => {
         <WeatherIcon src={WeatherIcons[weather?.weather[0].icon]} />
       </WeatherContainer>
       <Location>{`${weather?.name}, ${weather?.sys?.country}`}</Location>
-
+      <hr />
       <WeatherInfoLabel>Weather Info</WeatherInfoLabel>
       <WeatherInfoContainer>
         <WeatherInfoComponent
@@ -136,6 +136,7 @@ const WeatherComponent = (props) => {
         <WeatherInfoComponent name={"wind"} value={weather?.wind?.speed} />
         <WeatherInfoComponent name={"pressure"} value={weather?.main?.pressure} />
       </WeatherInfoContainer>
+      </div>
     </>
   );
 };

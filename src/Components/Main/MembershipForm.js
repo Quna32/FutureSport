@@ -18,14 +18,6 @@ function MembershipForm() {
       return;
     }
 
-    // Form data to be submitted (you can modify this as needed)
-    const formData = {
-      firstName,
-      lastName,
-      email,
-      password,
-    };
-
     // Perform further actions with the form data (e.g., send to server)
 
     // Clear form fields

@@ -3,6 +3,14 @@ import React from 'react';
 function Table() {
   return (
     <div className="table-container">
+      <h3>Team Positions</h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec justo
+        eu metus consectetur ullamcorper. Fusce vestibulum tortor a odio
+        pulvinar, vel feugiat leo varius. Nulla facilisi. Nunc maximus convallis
+        lacinia. Ut dignissim justo eu ante lacinia, at pulvinar dolor tempor.
+        Integer vel ex vel lorem posuere fermentum.
+      </p>
       <table className="table-data">
         <thead>
           <tr>
@@ -39,14 +47,7 @@ function Table() {
           </tr>
         </tbody>
       </table>
-      <h3>Team Positions</h3>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec justo
-        eu metus consectetur ullamcorper. Fusce vestibulum tortor a odio
-        pulvinar, vel feugiat leo varius. Nulla facilisi. Nunc maximus convallis
-        lacinia. Ut dignissim justo eu ante lacinia, at pulvinar dolor tempor.
-        Integer vel ex vel lorem posuere fermentum.
-      </p>
+      
       <hr />
     </div>
   );
