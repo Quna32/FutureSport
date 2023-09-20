@@ -24,7 +24,7 @@ function NewsCarousel({ images }) {
   }, [handleNextClick]); // Include 'handleNextClick' in the dependency array
 
   return (
-    <div className="carousel">
+    <div className="carousel" data-testid="image-carousel">
       <h2>News</h2>
       <div
         className="carousel-inner"
@@ -34,16 +34,17 @@ function NewsCarousel({ images }) {
           <div
             key={index}
             className={`carousel-slide ${index === slideIndex ? 'active' : ''}`}
+            data-testid={`carousel-slide-${index}`} // Add data-testid for individual slides
           >
             <img src={image} alt={`News ${index + 1}`} />
           </div>
         ))}
       </div>
 
-      <button className="carousel-prev" onClick={handlePrevClick}>
+      <button className="carousel-prev" onClick={handlePrevClick} data-testid="prev-button">
         Previous
       </button>
-      <button className="carousel-next" onClick={handleNextClick}>
+      <button className="carousel-next" onClick={handleNextClick} data-testid="next-button">
         Next
       </button>
       <hr />
@@ -52,4 +53,3 @@ function NewsCarousel({ images }) {
 }
 
 export default NewsCarousel;
-

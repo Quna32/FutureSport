@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import {WeatherIcons} from "../../App.js";
-
+import { WeatherIcons } from "../../App.js";
 
 export const WeatherInfoIcons = {
   sunset: `${process.env.PUBLIC_URL}/icons/temp.svg`,
@@ -97,8 +96,8 @@ const WeatherInfoComponent = (props) => {
   const { name, value } = props;
   return (
     <InfoContainer>
-      <InfoIcon src={WeatherInfoIcons[name]} />
-      <InfoLabel>
+      <InfoIcon src={WeatherInfoIcons[name]} data-testid={`weather-info-icon-${name}`} />
+      <InfoLabel data-testid={`weather-info-label-${name}`}>
         {value}
         <span>{name}</span>
       </InfoLabel>
@@ -116,26 +115,26 @@ const WeatherComponent = (props) => {
   };
   return (
     <>
-    <div className="weather-container">
-      <WeatherContainer>
-        <Condition>
-          <span>{`${Math.floor(weather?.main?.temp - 273)}°C`}</span>
-          {`  |  ${weather?.weather[0].description}`}
-        </Condition>
-        <WeatherIcon src={WeatherIcons[weather?.weather[0].icon]} />
-      </WeatherContainer>
-      <Location>{`${weather?.name}, ${weather?.sys?.country}`}</Location>
-      <hr />
-      <WeatherInfoLabel>Weather Info</WeatherInfoLabel>
-      <WeatherInfoContainer>
-        <WeatherInfoComponent
-          name={isDay ? "sunset" : "sunrise"}
-          value={`${getTime(weather?.sys[isDay ? "sunset" : "sunrise"])}`}
-        />
-        <WeatherInfoComponent name={"humidity"} value={weather?.main?.humidity} />
-        <WeatherInfoComponent name={"wind"} value={weather?.wind?.speed} />
-        <WeatherInfoComponent name={"pressure"} value={weather?.main?.pressure} />
-      </WeatherInfoContainer>
+      <div className="weather-container">
+        <WeatherContainer>
+          <Condition>
+            <span>{`${Math.floor(weather?.main?.temp - 273)}°C`}</span>
+            {`  |  ${weather?.weather[0].description}`}
+          </Condition>
+          <WeatherIcon src={WeatherIcons[weather?.weather[0].icon]} data-testid="weather-icon" />
+        </WeatherContainer>
+        <Location>{`${weather?.name}, ${weather?.sys?.country}`}</Location>
+        <hr />
+        <WeatherInfoLabel>Weather Info</WeatherInfoLabel>
+        <WeatherInfoContainer>
+          <WeatherInfoComponent
+            name={isDay ? "sunset" : "sunrise"}
+            value={`${getTime(weather?.sys[isDay ? "sunset" : "sunrise"])}`}
+          />
+          <WeatherInfoComponent name={"humidity"} value={weather?.main?.humidity} />
+          <WeatherInfoComponent name={"wind"} value={weather?.wind?.speed} />
+          <WeatherInfoComponent name={"pressure"} value={weather?.main?.pressure} />
+        </WeatherInfoContainer>
       </div>
     </>
   );

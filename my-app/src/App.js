@@ -6,14 +6,12 @@ import WeatherComponent from "./Components/Aside/WeatherInfoComponent.js";
 import Header from './Components/Header/Header.js';
 import Welcome from './Components/Header/Welcome.js';
 import Navigation from './Components/Navigation/Navigation.js';
-import Main from './Components/Main/Main.js';
 import NewsCarousel from './Components/News/NewsCarousel.js';
 import AboutUs from './Components/AboutUs/AboutUs.js';
 import Calendar from './Components/Main/Calendar.js';
 import Table from './Components/Main/Table.js';
 import Map from './Components/Main/Map.js';
 import MembershipForm from './Components/Main/MembershipForm.js';
-import Aside from './Components/Aside/Aside.js';
 import FooterMessage from "./Components/Footer/FooterMessage.js";
 import ScrollToTopButton from "./Components/Footer/ScrollToTopButton.js";
 import Footer from './Components/Footer/Footer.js';
@@ -52,7 +50,7 @@ function App() {
   };
 
   useEffect(() => {
-    // Fetch weather data for Melbourne, AU when the component mounts.
+    // Fetch weather data for Melbourne, AU
     fetchWeather();
   }, []);
 
@@ -82,7 +80,6 @@ function App() {
               <Header />
               <Welcome />
               <Navigation />
-              <Main />
               <div id="news-section">
                 <NewsCarousel images={newsImages} />
               </div>
@@ -97,7 +94,6 @@ function App() {
               <div id="membership-section">
                 <MembershipForm />
               </div>
-              <Aside />
               <FooterMessage />
               <ScrollToTopButton />
             </div>

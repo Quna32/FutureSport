@@ -11,10 +11,10 @@ const ScrollToTopButton = () => {
 
   return (
     <div>
-    <button className="scrollToTopButton" onClick={scrollToTop}>
-      Back to Top
-    </button>
-    <hr />
+      <button className="scrollToTopButton" data-testid="scroll-button" onClick={scrollToTop}>
+        Back to Top
+      </button>
+      <hr />
     </div>
   );
 };

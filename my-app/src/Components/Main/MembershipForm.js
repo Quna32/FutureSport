@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
 function MembershipForm() {
-  // State for form input fields
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
