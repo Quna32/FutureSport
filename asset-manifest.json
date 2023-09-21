@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/FutureSport/static/css/main.ef223e63.css",
+    "main.js": "/FutureSport/static/js/main.4c99d8fe.js",
+    "static/js/787.28cb0dcd.chunk.js": "/FutureSport/static/js/787.28cb0dcd.chunk.js",
+    "index.html": "/FutureSport/index.html",
+    "main.ef223e63.css.map": "/FutureSport/static/css/main.ef223e63.css.map",
+    "main.4c99d8fe.js.map": "/FutureSport/static/js/main.4c99d8fe.js.map",
+    "787.28cb0dcd.chunk.js.map": "/FutureSport/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ef223e63.css",
+    "static/js/main.4c99d8fe.js"
+  ]
+}
